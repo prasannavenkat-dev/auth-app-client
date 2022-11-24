@@ -24,7 +24,10 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
     let tokenStr = window.sessionStorage.getItem('token');
     let email = window.sessionStorage.getItem('email');
     setToken(() => tokenStr);
-    let res1 = await axios.post("https://auth-app-server12.herokuapp.com/getProfile", { email, token: tokenStr });
+    let res1 = await post("https://auth-app-server12.herokuapp.com/getProfile", {  headers: {
+      'Access-Control-Allow-Origin': '*'
+
+  }},{ email, token: tokenStr });
 
     if (res1.status == 200) {
       let { name, mobile, place } = JSON.parse(res1.data.userData);
@@ -76,7 +79,10 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
     try {
 
 
-      let res1 = await axios.post(url, body);
+      let res1 = await axios.post(url,   {headers: {
+        'Access-Control-Allow-Origin': '*'
+
+    }},body);
       if (res1.status == 200) {
         message = res1.data.messsage
         setSnackbarInfo(() => {
