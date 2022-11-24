@@ -28,7 +28,9 @@ const [snackbarInfo,setSnackbarInfo] = useState({message:"",type:""})
 
   useEffect(() => {
 
-
+setUserInfo(()=>{
+  return {email:"",name:"",mobile:"",place:"",password:""}
+})
     if (page == "signup") {
      
         document.title="Sign Up";
@@ -47,6 +49,8 @@ const [snackbarInfo,setSnackbarInfo] = useState({message:"",type:""})
       setResetPass(true);
       setSignUp(false)
     }
+
+
 
   }, [page]);
 
