@@ -24,7 +24,7 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
     let tokenStr = window.sessionStorage.getItem('token');
     let email = window.sessionStorage.getItem('email');
     setToken(() => tokenStr);
-    let res1 = await post("https://auth-app-server12.herokuapp.com/getProfile", {  headers: {
+    let res1 = await axios.post("https://auth-app-server12.herokuapp.com/getProfile", {  headers: {
       'Access-Control-Allow-Origin': '*'
 
   }},{ email, token: tokenStr });
