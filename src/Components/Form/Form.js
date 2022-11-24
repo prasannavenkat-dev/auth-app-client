@@ -155,9 +155,9 @@ const [snackbarInfo,setSnackbarInfo] = useState({message:"",type:""})
 
       
     } catch (error) {
-      console.log(error.response.data.message)      
+      let message = error?.response?.data?.message || "Error Signing In";
       setSnackbarInfo(()=>{
-        return {message:error.response.data.message,type:"error"}
+        return {message,type:"error"}
         });
   
         setOpenSnackBar(()=>true);
