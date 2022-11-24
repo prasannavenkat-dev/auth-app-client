@@ -51,12 +51,23 @@ useEffect(() => {
 
     <div className="App" style={{backgroundImage:'url("images/bg-2.jpg")',backgroundSize:"cover",backgroundPosition:"center center",backgroundRepeat:"no-repeat"}} >
     <Routes>
-    <Route exact path="/"  element={<ProtectedRoute isLoggedIn={isLoggedIn} />} />
+    <Route exact path="/"
+    
+ 
+    
+      element={ isLoggedIn ?
+            <Navigate to="/profile" /> : <Navigate to="/signin" />
+} />
     <Route  path="/signin" element={<Form page="signin" setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />}/>
     <Route  path="/signup" element={<Form page="signup" setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading}/>}/>
     <Route  path="/resetUser" element={<Form page="resetPass" setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />}/>
     <Route  path="/profile" element={<ProtectedRoute isLoggedIn={isLoggedIn} token={token} setToken={setToken}  setIsLoggedIn ={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />} />
-   
+    <Route
+    path="*"
+    element={ 
+            <Navigate to="/" /> 
+}
+/>
    
     </Routes>
     </div>
