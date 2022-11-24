@@ -135,12 +135,12 @@ setUserInfo(()=>{
   async function callApi(url,params){
     
     try {
-      let {data} = await axios.post(url,
+      let {data} = await axios.post(url,params,
         {  headers: {
           'Access-Control-Allow-Origin': '*'
 
       }}
-        ,params);
+        );
       
    let message=data?.message;
                  

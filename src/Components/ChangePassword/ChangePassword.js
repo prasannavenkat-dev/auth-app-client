@@ -65,11 +65,11 @@ const ChangePassword = ({token,email,setSnackbarInfo,setOpenSnackBar,isLoading,s
         let body={email,...passwordDetails,token}
 
      
-       let res1 = await axios.post(url,{
+       let res1 = await axios.post(url,body,{
         headers: {
             'Access-Control-Allow-Origin': '*'
         }}
-        ,body);
+        );
 
        if(res1.status==200){
 
