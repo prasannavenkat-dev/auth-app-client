@@ -10,12 +10,11 @@ import { Box, IconButton, Menu, MenuItem, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import PortraitIcon from '@mui/icons-material/Portrait';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
-const Profile = ({ setIsLoggedIn,isLoading,setIsLoading }) => {
+const Profile = ({ setIsLoggedIn,isLoading,setIsLoading,token,setToken }) => {
 
 
   const [isProfile, setIsProfile] = useState(false);
 
-  const [token, setToken] = useState("");
   const [userMail, setUserMail] = useState("");
   const navigate = useNavigate();
   const [openSnackbar, setOpenSnackBar] = useState(false);

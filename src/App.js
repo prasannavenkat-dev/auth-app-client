@@ -6,12 +6,12 @@ import { useEffect, useState } from 'react';
 
 
 
-function ProtectedRoute({isLoggedIn,setIsLoggedIn,isLoading,setIsLoading}){
+function ProtectedRoute({isLoggedIn,setIsLoggedIn,isLoading,setIsLoading,token,setToken}){
 
 
   return(
     <>
-      {isLoggedIn ? <Profile setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} /> : <Navigate to="/signin" />}
+      {isLoggedIn ? <Profile setIsLoggedIn={setIsLoggedIn} token={token} setToken={setToken} isLoading={isLoading} setIsLoading={setIsLoading} /> : <Navigate to="/signin" />}
     </>
   )
 }
@@ -22,15 +22,16 @@ const [isLoggedIn,setIsLoggedIn] = useState(false);
 
 const [isLoading,setIsLoading] = useState(false);
 
+const [token, setToken] = useState("");
 
 
 
 
 useEffect(() => {
 
-   let token = window.sessionStorage.getItem("token")
+   let tokenStr = window.sessionStorage.getItem("token")
    
-   if(token)
+   if(tokenStr)
    {
     setIsLoggedIn(()=>true);
    }
@@ -40,7 +41,7 @@ useEffect(() => {
    }
 
 
-}, [])
+}, [token])
 
 
 
@@ -54,7 +55,9 @@ useEffect(() => {
     <Route  path="/signin" element={<Form page="signin" setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />}/>
     <Route  path="/signup" element={<Form page="signup" setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading}/>}/>
     <Route  path="/resetUser" element={<Form page="resetPass" setIsLoggedIn={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />}/>
-    <Route  path="/profile" element={<ProtectedRoute isLoggedIn={isLoggedIn}  setIsLoggedIn ={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />} />
+    <Route  path="/profile" element={<ProtectedRoute isLoggedIn={isLoggedIn} token={token} setToken={setToken}  setIsLoggedIn ={setIsLoggedIn} isLoading={isLoading} setIsLoading={setIsLoading} />} />
+   
+   
     </Routes>
     </div>
   );
