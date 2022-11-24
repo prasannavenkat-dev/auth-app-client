@@ -1,149 +1,125 @@
-.profilePage{
-        width:100vw;
-        height:100vh;
-        background-size:cover;
-        background-position:center center;
-        background-repeat:no-repeat;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
+.profilePage {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
-.navbar{
-    align-self:flex-start;
-    background:#f1f1f1;
-    width:100%;
-box-sizing: border-box;
-    height:80px;
+.navbar {
+  align-self: flex-start;
+  background: #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+  height: 80px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
-.profileContainer{
-    width: 40vw;
-    height: auto;
-    background-color: #f1f1f1;
-    margin:  auto;
-    padding: 40px;
-    border-radius: 35px;
-    display: flex;
-    flex-direction: column;
-
+.profileContainer {
+  width: 40vw;
+  height: auto;
+  background-color: #f1f1f1;
+  margin: auto;
+  padding: 40px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
-
- input{
-    width: 100%;
-    margin: 0;
-    padding: 6px 12px ;
- border: 2px solid #f1f1f1; 
-   height: 50px;
-   box-sizing: border-box;
-   border-radius: 8px;
-   font-size: 17px;
-   font-weight:500;
-   color: black;
-
+input {
+  width: 100%;
+  margin: 0;
+  padding: 6px 12px;
+  border: 2px solid #f1f1f1;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
 }
 
- input:focus{
-
-    border:2px solid #40332b;
-    box-shadow: none;
-outline: none;
+input:focus {
+  border: 2px solid #40332b;
+  box-shadow: none;
+  outline: none;
 }
 
-
- button{
-    border-radius: 8px;
-    border: 0;
- box-shadow: none;
- font-size: 16px;
- font-weight: 600;
- height: 50px;
- padding: 6px 12px;
- width: 100%;
-background-color: #40332b;
-color: #f1f1f1;
- }
-
-
- .profileContainer div{
-    margin-bottom: 40px;
-    height: auto;
- }
- 
- 
-  button:hover{
- cursor: pointer; 
-  }
-
-  .label{
-color:#40332b;
-font-size: medium;
-font-weight: 600;
-  }
-
-.menuLink{
-    font-size: large;
-    font-weight: 600;
-    color:#40332b;
+button {
+  border-radius: 8px;
+  border: 0;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+  padding: 6px 12px;
+  width: 100%;
+  background-color: #40332b;
+  color: #f1f1f1;
 }
 
-  .menuLink:hover{
-    cursor: pointer;
-  }
-
-
-  @media only screen and (min-width: 300px) and (max-width: 700px) {
-    
-    .profileContainer{
-        width:80vw;
-        /* padding: 40px; */
-    }
-  }
-
-
-
-  
-@media only screen and (max-width: 300px) {
-    
-  .profileContainer{
-      width:80vw;
-      padding: 30px;
-  }
+.profileContainer div {
+  margin-bottom: 40px;
+  height: auto;
 }
 
+button:hover {
+  cursor: pointer;
+}
 
+.label {
+  color: #40332b;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.menuLink {
+  font-size: large;
+  font-weight: 600;
+  color: #40332b;
+}
+
+.menuLink:hover {
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 300px) and (max-width: 700px) {
-  
-  .profileContainer{
-      width:80vw;
-      padding: 40px;
+  .profileContainer {
+    width: 80vw;
+    /* padding: 40px; */
   }
 }
 
-
-@media only screen and (min-width: 701px) and (max-width:1000px) {
-  
-  .profileContainer{
-      width:65vw;
+@media only screen and (max-width: 300px) {
+  .profileContainer {
+    width: 80vw;
+    padding: 30px;
   }
 }
 
-@media only screen and (min-width: 1001px)  {
-  
-  .profileContainer{
-      width:30vw;
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .profileContainer {
+    width: 80vw;
+    padding: 40px;
   }
 }
 
-  
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  .profileContainer {
+    width: 65vw;
+  }
+}
 
-
-  
+@media only screen and (min-width: 1001px) {
+  .profileContainer {
+    width: 30vw;
+  }
+}

@@ -1,166 +1,143 @@
-.login-signup-container{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5f2e9;
-
+.login-signup-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f2e9;
 }
 
-.login-signup{
-    width: 30vw;
-    min-height: 40vh;
-    max-height: 80vh;
-    height: auto;
-    padding: 65px;
-    box-sizing: border-box;
-    border-radius: 35px;
-    background: #ffffff;
-color: #242424
-;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
+.login-signup {
+  width: 30vw;
+  min-height: 40vh;
+  max-height: 80vh;
+  height: auto;
+  padding: 65px;
+  box-sizing: border-box;
+  border-radius: 35px;
+  background: #ffffff;
+  color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-box-shadow: 0 0 15px -2px #444444;
-
-
+  box-shadow: 0 0 15px -2px #444444;
 }
 
-.login-signup button{
-    height: 35px;
-    padding: 6px 12px;
-    width: 100%;
-background-color: #40332b;
-color: #fdf9ed
-;
+.login-signup button {
+  height: 35px;
+  padding: 6px 12px;
+  width: 100%;
+  background-color: #40332b;
+  color: #fdf9ed;
 }
 
 .header {
-display: flex;
-justify-content: center;
-align-items: center;
-/* color: #242424; */
-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: #242424; */
+  color: black;
 }
 
-
-
-.login-signup div,.login-signup button{
-    height: 45px;
-    /* margin-bottom: 25px; */
-   align-self: stretch;
-  
+.login-signup div,
+.login-signup button {
+  height: 45px;
+  /* margin-bottom: 25px; */
+  align-self: stretch;
 }
 
-.login-signup div{
-    margin-bottom: 20px;
+.login-signup div {
+  margin-bottom: 20px;
 }
 
-.login-signup div input{
-    width: 100%;
-    margin: 0;
-    padding: 6px 12px ;
- border: 2px solid #f1f1f1; 
-   height: 100%;
-   box-sizing: border-box;
-   border-radius: 8px;
-   font-size: 17px;
-   font-weight:500;
-   color: black;
-
+.login-signup div input {
+  width: 100%;
+  margin: 0;
+  padding: 6px 12px;
+  border: 2px solid #f1f1f1;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
 }
 
-.login-signup div input:focus{
-
-    border:2px solid #40332b;
-    box-shadow: none;
-outline: none;
+.login-signup div input:focus {
+  border: 2px solid #40332b;
+  box-shadow: none;
+  outline: none;
 }
 
-
-.login-signup button{
-   border-radius: 8px;
-   border: 0;
-box-shadow: none;
-font-weight: 600;
+.login-signup button {
+  border-radius: 8px;
+  border: 0;
+  box-shadow: none;
+  font-weight: 600;
 }
 
-
-.login-signup button:hover{
-cursor: pointer; 
- }
-
-
-    
-hr{
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    border-color: #40332b;
-    background-color: #40332b;
+.login-signup button:hover {
+  cursor: pointer;
 }
 
-
-.login-signup div:last-child{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    font-weight: 600;
-    flex-wrap: nowrap;
-    margin-bottom: 0;
+hr {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  border-color: #40332b;
+  background-color: #40332b;
 }
 
-.login-signup:last-child hr{
+.login-signup div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+}
 
+.login-signup:last-child hr {
   width: 10%;
- border: 0.3px solid black;
- margin: 0 10px;
+  border: 0.3px solid black;
+  margin: 0 10px;
 }
 
-.login-signup:last-child span{
+.login-signup:last-child span {
+  padding: 0;
+  text-align: center;
+}
 
-    padding: 0;
-    text-align: center;
-   }
-
-.link:hover,small:hover{
-cursor: pointer;
+.link:hover,
+small:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 300px) {
-    
-    .login-signup{
-        width:80vw;
-        padding: 30px;
-    }
+  .login-signup {
+    width: 80vw;
+    padding: 30px;
   }
-  
-
+}
 
 @media only screen and (min-width: 300px) and (max-width: 700px) {
-    
-    .login-signup{
-        width:80vw;
-        padding: 40px;
-    }
+  .login-signup {
+    width: 80vw;
+    padding: 40px;
   }
-  
+}
 
-  @media only screen and (min-width: 701px) and (max-width:1000px) {
-    
-    .login-signup{
-        width:65vw;
-    }
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  .login-signup {
+    width: 65vw;
   }
+}
 
-  @media only screen and (min-width: 1001px)  {
-    
-    .login-signup{
-        width:30vw;
-    }
+@media only screen and (min-width: 1001px) {
+  .login-signup {
+    width: 30vw;
   }
-  
+}
