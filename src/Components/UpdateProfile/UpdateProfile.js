@@ -26,7 +26,6 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
     setToken(() => tokenStr);
     let res1 = await axios.post("https://auth-app-server12.herokuapp.com/getProfile",{ email, token: tokenStr },{  headers: {
       'Access-Control-Allow-Origin': '*'
-
   }});
 
     if (res1.status == 200) {
@@ -84,7 +83,7 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
 
     }});
       if (res1.status == 200) {
-        message = res1.data.messsage
+        message = res1.data.message || "User updated successfully"
         setSnackbarInfo(() => {
           return { message, type: "success" }
         })

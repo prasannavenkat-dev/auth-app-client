@@ -40,7 +40,7 @@ useEffect(() => {
    }
 
 
-}, [isLoggedIn])
+}, [])
 
 
 
