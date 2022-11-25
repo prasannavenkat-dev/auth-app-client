@@ -35,9 +35,11 @@ const Form = ({ page, setIsLoggedIn }) => {
   }
 
   useEffect(() => {
+
     setUserInfo(() => {
       return { email: '', name: '', mobile: '', place: '', password: '' };
     });
+    
     if (page == 'signup') {
       document.title = 'Sign Up';
       setResetPass(false);

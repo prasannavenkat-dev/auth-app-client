@@ -15,7 +15,7 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
       let value = event.nativeEvent;
       if (
         !(
-          (value.data >= 0 && value.data <= 9 && userInfo.mobile.length < 10) ||
+          (value.data >= 0 && value.data <= 9 && profileInfo.mobile.length < 10) ||
           value.inputType == 'deleteContentBackward'
         )
       ) {
