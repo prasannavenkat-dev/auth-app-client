@@ -11,6 +11,17 @@ const UpdateProfile = ({ token, setToken, setSnackbarInfo, setOpenSnackBar, isLo
   }, []);
 
   function profileHandle(event) {
+    if (event.target.name == 'mobile') {
+      let value = event.nativeEvent;
+      if (
+        !(
+          (value.data >= 0 && value.data <= 9 && userInfo.mobile.length < 10) ||
+          value.inputType == 'deleteContentBackward'
+        )
+      ) {
+        return;
+      }
+    }
     setProfileInfo((prev) => {
       return { ...prev, [event.target.name]: event.target.value };
     });
