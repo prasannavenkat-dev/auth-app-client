@@ -18,6 +18,14 @@ const Form = ({ page, setIsLoggedIn }) => {
   const [snackbarInfo, setSnackbarInfo] = useState({ message: '', type: '' });
 
   function userInfoHandle(event) {
+
+    if((event.target.name) =="mobile"){
+      let value = (event.nativeEvent)
+      console.log(value)
+      if(!(((value.data >=0 && value.data <=9) && userInfo.mobile.length<10  ) || value.inputType=="deleteContentBackward" )){
+        return
+      }
+    }
     setUserInfo((prev) => {
       return { ...prev, [event.target.name]: event.target.value };
     });
