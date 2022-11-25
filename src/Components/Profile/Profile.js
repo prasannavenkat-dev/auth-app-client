@@ -46,7 +46,7 @@ const Profile = ({ setIsLoggedIn, isLoading, setIsLoading, token, setToken }) =>
   };
 
   return (
-    <div className="profilePage" style={{ backgroundImage: 'url("images/bg-1.jpg")' }}>
+    <div className="profilePage" style={{ backgroundColor:"#eee5e0",backgroundImage: 'url("images/bg-1.jpg")' }}>
       <div className="navbar">
         <div>
           {/* <img src="images/logo.png" style={{width:"10%"}}/> */}
