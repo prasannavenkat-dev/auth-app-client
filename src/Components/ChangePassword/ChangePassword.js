@@ -74,7 +74,6 @@ const ChangePassword = ({ token, email, setSnackbarInfo, setOpenSnackBar, isLoad
 
       setIsLoading(() => false);
 
-      console.log(res1);
     } catch (error) {
       let message = error?.response?.data?.message || 'Password Change Failed';
       setSnackbarInfo(() => {
