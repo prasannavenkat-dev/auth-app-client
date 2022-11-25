@@ -124,7 +124,7 @@ const Form = ({ page, setIsLoggedIn }) => {
         },
       });
 
-      let message = data?.message;
+      let message = data?.message || "Success";
 
       if (data.token) {
         window.sessionStorage.setItem('token', data.token);
